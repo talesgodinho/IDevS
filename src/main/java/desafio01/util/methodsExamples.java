@@ -2,7 +2,12 @@ package desafio01.util;
 
 import java.util.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class methodsExamples {
+
+    private static final Logger LOG = LogManager.getLogger(methodsExamples.class);
 
     public static String inputString(){
 
@@ -13,15 +18,22 @@ public class methodsExamples {
         String palavra =  input.nextLine();
         System.out.println("*———————————————————————————————————————————*");
 
+        LOG.info("Enviando a palavra...");
+
         return palavra.toLowerCase();
     }
 
     public static int calculaPontuacao(String palavra){
+
+        LOG.info("Preparando para calcular a pontuação...");
+
         int pont = 0;
 
         for (int i=0; i<palavra.length(); i++) {
             pont = pont + retornaValor(palavra.charAt(i));
         }
+
+        LOG.info("Pontuação obtida.");
 
         return pont;
     }
