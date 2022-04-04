@@ -5,9 +5,9 @@ import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class methodsExamples {
+public class MethodsExamples {
 
-    private static final Logger LOG = LogManager.getLogger(methodsExamples.class);
+    private static final Logger LOG = LogManager.getLogger(MethodsExamples.class);
 
     public static String inputString(){
 
